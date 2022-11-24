@@ -12,7 +12,7 @@
           (
             system :
               {
-	        lib = builtins.mapAttrs ( name : value : builtins.getAttr system ( builtins.getAttr "lib" value ) ) { argue = argue ; try = try ; visit = visit ; } ;
+	        lib = builtins.mapAttrs ( name : value : builtins.getAttr system ( builtins.getAttr "lib" value ) ) { argue = argue ; try = try ; } ;
               }
       ) ;
     }
