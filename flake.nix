@@ -1,12 +1,11 @@
   {
       inputs =
         {
-          nixpkgs.url = "github:nixos/nixpkgs" ;
           flake-utils.url = "github:numtide/flake-utils" ;
 	  argue.url = "github:nextmoose/argue" ;
         } ;
       outputs =
-        { self , nixpkgs , flake-utils } :
+        { self , flake-utils , argue } :
           flake-utils.lib.eachDefaultSystem
           (
             system :
