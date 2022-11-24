@@ -4,7 +4,7 @@
 	  argue.url = "github:nextmoose/argue" ;
           flake-utils.url = "github:numtide/flake-utils" ;
 	  try.url = "github:nextmoose/try" ;
-	  utils.url = "github:nextmoose/utils" ;
+	  visit.url = "github:nextmoose/visit" ;
         } ;
       outputs =
         { argue , flake-utils , self , try , visit } :
@@ -12,7 +12,7 @@
           (
             system :
               {
-	        lib = builtins.mapAttrs ( name : value : builtins.getAttr system ( builtins.getAttr "lib" value ) ) { argue = argue ; try = try ; } ;
+	        lib = builtins.mapAttrs ( name : value : builtins.getAttr system ( builtins.getAttr "lib" value ) ) { argue = argue ; try = try ; visit = visit ; } ;
               }
       ) ;
     }
