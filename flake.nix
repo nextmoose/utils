@@ -8,7 +8,7 @@
 	  visit.url = "github:nextmoose/visit" ;
         } ;
       outputs =
-        { argue , flake-utils , self , try , visit } :
+        { argue , flake-utils , self , strip , try , visit } :
           flake-utils.lib.eachDefaultSystem
           (
             system :
