@@ -9,12 +9,12 @@
 	  visit.url = "github:nextmoose/visit" ;
         } ;
       outputs =
-        { _argue , _bash-variable , _strip , _try , _visit , flake-utils , self } :
+        { argue , bash-variable , flake-utils , self , strip , try , visit } :
           flake-utils.lib.eachDefaultSystem
           (
             system :
               {
-	        lib = builtins.mapAttrs ( name : value : builtins.getAttr system ( builtins.getAttr "lib" value ) ) { argue = _argue ; bash-variable = _bash-variable ; strip = _strip ; try = _try ; visit = _visit ; } ;
+	        lib = builtins.mapAttrs ( name : value : builtins.getAttr system ( builtins.getAttr "lib" value ) ) { argue = argue ; bash-variable = bash-variable ; strip = strip ; try = try ; visit = visit ; } ;
               }
       ) ;
     }
