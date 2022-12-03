@@ -2,7 +2,7 @@
       inputs =
         {
 	  argue.url = "github:nextmoose/argue" ;
-	  bash-variable = "github:nextmoose/bash-variable" ;
+	  bash-variable.url = "github:nextmoose/bash-variable" ;
           flake-utils.url = "github:numtide/flake-utils" ;
 	  strip.url = "github:nextmoose/strip" ;
 	  try.url = "github:nextmoose/try" ;
