@@ -14,7 +14,7 @@
           (
             system :
               {
-	        lib = builtins.mapAttrs ( name : value : builtins.getAttr system ( builtins.getAttr "lib" value ) ) { argue = _argue ; bash-variable = _bash-variable , strip = _strip ; try = _try ; visit = _visit ; } ;
+	        lib = builtins.mapAttrs ( name : value : builtins.getAttr system ( builtins.getAttr "lib" value ) ) { argue = _argue ; bash-variable = _bash-variable ; strip = _strip ; try = _try ; visit = _visit ; } ;
               }
       ) ;
     }
