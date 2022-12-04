@@ -16,8 +16,8 @@
               {
 	        lib =
 		  let
-		    _bash-variable = expression : _utils.bash-variable ( if builtins.typeOf expression == "string" then expression else builtins.concatStringsSep "_" expression ) ;
-		    in builtins.mapAttrs ( name : value : builtins.getAttr system ( builtins.getAttr "lib" value ) ) { argue = argue ; bash-variable = _bash-variable ; strip = strip ; try = try ; visit = visit ; } ;
+		    # _bash-variable = expression : _utils.bash-variable ( if builtins.typeOf expression == "string" then expression else builtins.concatStringsSep "_" expression ) ;
+		    in builtins.mapAttrs ( name : value : builtins.getAttr system ( builtins.getAttr "lib" value ) ) { argue = argue ; bash-variable = bash-variable ; strip = strip ; try = try ; visit = visit ; } ;
               }
       ) ;
     }
